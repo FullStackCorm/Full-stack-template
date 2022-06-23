@@ -1,11 +1,12 @@
 //1. Initialize npm and install dependencies
 // express, dotenv, cors, mongodb, ejs, nodemon (--save-dev)
+// Add "start": "node server.js", "dev": "nodemon server.js" to scripts in package.json
 
 //2. Require dependencies
 
 //3. Declare variables
 
-//4. Connect to MongoDB - add connection string to .env file
+//4. Connect to MongoDB - add connection string to .env file; add .env file to .gitignore
 
 //5. Create Port
 
@@ -26,3 +27,4 @@
 // echo "web: node server.js" > Procfile
 // git add .
 // git commit -m 'message-here'
+
