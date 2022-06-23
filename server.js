@@ -1,13 +1,13 @@
-// Require dependencies
+    // Require dependencies
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 require('dotenv').config();
 
-// Require middleware //
+    // Require middleware //
 
-// Declare variables //
+    // Declare variables //
 let db, 
     dbConnectionString = process.env.DB_STRING,
     dbName = 'star-wars-quotes',
@@ -15,7 +15,21 @@ let db,
 
 MongoClient.connect(dbConnectionString)
     .then(client => {
-        console.log(`All your base are belong to us. You are on the way to destruction.`)
+        console.log(`Cats: All your base are belong to us. You are on the way to destruction.`)
         db = client.db(dbName)
         collection = db.collection('quotes')
     })
+
+
+
+
+    // MIDDLEWARE //
+
+app.set('view engine', 'ejs')
+
+
+
+    // PORT = 8000 //
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`Captain: It's you on port ${process.env.PORT}!`)
+})
